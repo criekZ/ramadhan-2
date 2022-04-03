@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #104020;
+    height: 100vh;
+}
+
+.decoration-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.greet-element {
+    position: relative;
+    width: 300px;
+    animation: fade 3s linear, slideUp 2s linear;
+}
+
+.left-element,
+.right-element {
+    width: 250px;
+    position: absolute;
+    top: -200px;
+    animation: fade 2s linear, swing 5s linear infinite 2s;
+}
+
+.left-element {
+    left: 0;
+}
+
+.right-element {
+    right: 0;
+}
+
+@keyframes swing {
+    0%,
+    100% {
+        top: -200px;
+    }
+
+    50% {
+        top: -220px;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        bottom: -20px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
